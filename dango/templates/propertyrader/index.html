@@ -1,0 +1,412 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div id="preloader"></div>
+
+    <main id="main" class="main-img">
+
+        
+
+
+    <section class="banner-section cover-image"
+    style="background-image: url(https://24-7propertytraders.site/asset/theme1/images/banner/64945dc7783b21687444935.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-7 col-lg-8 text-lg-start text-center">
+                <h2 class="banner-title"> Got to the next level investing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. animi ipsum et optio aliquid eligendi non culpa impedit repudiandae inventore atque aperiam, reprehenderit quas</p>
+                <div class="banner-btn-group justify-content-lg-start justify-content-center mt-4">
+                    <a href="{% url 'register' %}" class="sp_theme_btn">Get started</a>
+                    <a href="{% url 'login' %}" class="sp_border_btn">Sign in</a>
+                </div>
+                <h5 class="mt-5"></h5>
+                <div class="row mt-4 overview-wrapper">
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener"
+            target="_blank"><span class="blue-text">Markets today</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+            "symbols": [{
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR/USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "locale": "en"
+        }
+    </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+<div class="calculate-area">
+    <div class="calculator"><img src="https://24-7propertytraders.site/asset/theme1/images/elements/budget.png" alt="image"></div>
+    <div class="shape-1"><img src="https://24-7propertytraders.site/asset/theme1/images/elements/cal-1.png" alt="image"></div>
+    <div class="shape-2"><img src="https://24-7propertytraders.site/asset/theme1/images/elements/cal-2.png" alt="image"></div>
+    <div class="shape-3"><img src="https://24-7propertytraders.site/asset/theme1/images/elements/cal-3.png" alt="image"></div>
+    <div class="shape-4"><img src="https://24-7propertytraders.site/asset/theme1/images/elements/cal-4.png" alt="image"></div>
+
+    <div class="container">
+        <div class="row gy-4 align-items-end">
+            <div class="col-lg-4 col-md-6">
+                <label class="mbl-h">Amount</label>
+                <input type="text" class="form-control" name="amount" id="amount"
+                    placeholder="Enter amount">
+            </div>
+            <div class="col-lg-5 col-md-6">
+                <label class="mbl-h">Investment plan</label>
+                <select class="form-select" name="selectplan" id="plan">
+                    <option selected disabled class="text-secondary">Select a plan</option>
+                                            <option value="9">Mansion</option>
+                                            <option value="10">Apartment</option>
+                                    </select>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" id="calculate-btn" class="sp_theme_btn w-100"> Calculate earning</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                        <section class="s-pt-100 s-pb-100 dark-bg">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="site-header">
+                    <h2 class="site-title">Investment plan</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gy-4">
+                                            <div class="col-lg-4 col-md-6">
+                    <div class="invest-plan">
+                        <div class="invest-plan-shape"></div>
+                        <div class="invest-plan-top">
+                            <h4 class="invest-plan-name">Apartment</h4>
+                            <h5 class="invest-plan-amount">15.00                                     %
+                                                            </h5>
+                            <p class="mb-0">Every Day</p>
+                        </div>
+
+                        <div class="invest-plan-middle">
+                            <h5 class="invest-plan-min-max">
+                                                                    Min
+                                    1,200.00 ZAR
+                                    <p class="mb-0">-</p>
+                                    Max
+                                    4,000.00 ZAR
+                                                            </h5>
+                            <ul class="invest-plan-features">
+                                <li>
+
+                                                                            For 30
+                                        Times
+                                    
+                                </li>
+
+                            
+
+                                                                    <li>Capital back No</li>
+                                                            </ul>
+                        </div>
+                        <div class="invest-plan-action mt-3">
+                                                            <a class="sp_theme_btn w-100 mb-3"
+                                    href="https://24-7propertytraders.site/gateways/10">Invest now</a>
+                                                                         
+                                    
+                                                    </div>
+                    </div>
+                </div>
+                                            <div class="col-lg-4 col-md-6">
+                    <div class="invest-plan">
+                        <div class="invest-plan-shape"></div>
+                        <div class="invest-plan-top">
+                            <h4 class="invest-plan-name">Mansion</h4>
+                            <h5 class="invest-plan-amount">20.00                                     %
+                                                            </h5>
+                            <p class="mb-0">Every Day</p>
+                        </div>
+
+                        <div class="invest-plan-middle">
+                            <h5 class="invest-plan-min-max">
+                                                                    Min
+                                    4,100.00 ZAR
+                                    <p class="mb-0">-</p>
+                                    Max
+                                    20,000.00 ZAR
+                                                            </h5>
+                            <ul class="invest-plan-features">
+                                <li>
+
+                                                                            For 30
+                                        Times
+                                    
+                                </li>
+
+                            
+
+                                                                    <li>Capital back No</li>
+                                                            </ul>
+                        </div>
+                        <div class="invest-plan-action mt-3">
+                                                            <a class="sp_theme_btn w-100 mb-3"
+                                    href="https://24-7propertytraders.site/gateways/9">Invest now</a>
+                                                                         
+                                    
+                                                    </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>
+
+<div class="modal fade" id="invest" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="https://24-7propertytraders.site/investmentplan/invest" method="post">
+            <input type="hidden" name="_token" value="CvQ1BtKE4LU9k4a9W32i0t7viqoi2kjjbNZHdjq9">            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Invest now</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-group">
+                            <label for="">Invest amount</label>
+                            <input type="text" name="amount" class="form-control">
+                            <input type="hidden" name="plan_id" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="sp_btn sp_btn_secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="sp_btn sp_theme_btn">Invest now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+            
+
+    <div class="modal fade" id="calculationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Profit calculate</h5>
+                    <button type="button" class="close sp_btn sp_btn_warning" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="profit">
+
+                </div>
+            </div>
+        </div>
+
+    
+    </main>
+    
+    <button type="button" class="sp_btn sp_btn_sm btn-floating" id="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg>
+    </button>
+
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/purecounter/purecounter.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/slick.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/php-email-form/validate.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/selectric.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/main.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/iziToast.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.uploadPreview.min.js"></script>
+
+        <script>
+        $(function() {
+            'use strict'
+
+            $('.balance').on('click', function() {
+                const modal = $('#invest');
+                modal.find('input[name=plan_id]').val($(this).data('plan').id);
+                modal.modal('show')
+            })
+        })
+    </script>
+        <script>
+            'use strict';
+            $(document).ready(function() {
+                $(document).on('click', '#calculate-btn', function() {
+
+                    let modal = $('#calculationModal');
+
+                    $('.selectplan').text('');
+                    $('.amount').text('');
+                    let id = $('#plan').val();
+                    let amount = $('#amount').val();
+                    var url = "https://24-7propertytraders.site/investment/calculate/:id";
+                    url = url.replace(':id', id);
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        data: {
+                            amount: amount,
+                            selectplan: id
+                        },
+                        success: (data) => {
+                            if (data.message) {
+                                iziToast.error({
+                                    message: data.message + ' ' + Number(data.amount).toFixed(2),
+                                    position: 'topRight',
+                                });
+
+                            } else {
+                                $('#profit').html(data);
+                                modal.modal('show');
+                            }
+
+
+                        },
+                        error: (error) => {
+                            if (typeof(error.responseJSON.errors.amount) !== "undefined") {
+                                iziToast.error({
+                                    message: error.responseJSON.errors.amount,
+                                    position: 'topRight',
+                                });
+                            }
+                            if (typeof(error.responseJSON.errors.selectplan) !== "undefined") {
+                                iziToast.error({
+                                    message: error.responseJSON.errors.selectplan,
+                                    position: 'topRight',
+                                });
+                            }
+                        }
+                    })
+                });
+
+
+
+            });
+        </script>
+        
+
+
+    
+    
+    
+    
+
+
+
+
+    <script>
+        'use strict'
+
+
+        $(document).on('submit', '#subscribe', function(e) {
+            e.preventDefault();
+            const email = $('.subscribe-email').val();
+            var url = "https://24-7propertytraders.site/subscribe";
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: {
+                    email: email,
+                },
+                success: (data) => {
+                    iziToast.success({
+                        message: data.message,
+                        position: 'topRight',
+                    });
+                    $('.subscribe-email').val('');
+
+                },
+                error: (error) => {
+                    if (typeof(error.responseJSON.errors.email) !== "undefined") {
+                        iziToast.error({
+                            message: error.responseJSON.errors.email,
+                            position: 'topRight',
+                        });
+                    }
+
+                }
+            })
+
+        });
+
+        var url = "https://24-7propertytraders.site/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+{% endblock %}

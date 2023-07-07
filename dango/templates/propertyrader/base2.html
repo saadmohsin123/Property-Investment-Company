@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="CvQ1BtKE4LU9k4a9W32i0t7viqoi2kjjbNZHdjq9">
+    <title>{% block title %}Property Investment Company - Home{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="https://24-7propertytraders.site/asset/theme1/images/icon/icon.png">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/cookie.css">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/selectric.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/slick.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/font-awsome.min.css">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/iziToast.min.css">
+    <style></style>
+
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/color.php?primary_color=0029D7">
+</head>
+<body>
+    
+    <main id="main" class="main-img">
+        <section class="auth-section">
+            <div class="auth-wrapper">
+                {% include "propertyrader/header2.html" %}
+                {% block content %}
+            </div>
+      {% endblock %}
+        </section>
+    </main>
+</body>
+</html>

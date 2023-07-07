@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="CvQ1BtKE4LU9k4a9W32i0t7viqoi2kjjbNZHdjq9">
+
+    <link rel="shortcut icon" type="image/png" href="https://24-7propertytraders.site/asset/theme1/images/icon/icon.png">
+
+    <title>{% block title %}Property Investment Company - Home{% endblock %}</title>
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/cookie.css">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/selectric.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/slick.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/iziToast.min.css">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/css/style.css" rel="stylesheet">
+
+        <style>
+         .tradingview-widget-container {
+            height: 46px !important;
+        }
+        
+        .tradingview-widget-copyright {
+            display: none;
+        }
+    </style>
+
+    <style>
+        #profit-table tr td{
+            color: #fff;
+        }
+    </style>
+
+    
+    <link rel="stylesheet"
+        href="https://24-7propertytraders.site/asset/theme1/frontend/css/color.php?primary_color=0029D7">
+</head>
+
+
+<body>
+    {% include "propertyrader/header.html" %}
+
+    <main id="main" class="main-img">
+        {% block content %}
+      {% endblock %}
+    </main>
+    {% include "propertyrader/footer.html" %}
+</body>
+</html>

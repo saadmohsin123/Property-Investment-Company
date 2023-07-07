@@ -1,0 +1,74 @@
+{% load static %}
+
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+        <div class="logo me-auto me-lg-0"><a href="{% url 'home' %}">
+                <span>
+
+                                            <img class="img-fluid rounded sm-device-img text-align"
+                            src="https://www.linkpicture.com/q/logo_19.png" width="80%" style="max-height:150px;" alt="logo">
+                    
+                </span>
+            </a>
+        </div>
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li class="{% if request.path == '/' %}active{% endif %}"><a class="nav-link"
+                        href="{% url 'home' %}">Home</a></li>
+                <li class="{% if request.path == '/investment/plan/' %}active{% endif %}"><a class="nav-link" href="{% url 'investment_plan' %}">Investment plans</a>
+                </li>
+
+                                    <li class="{% if request.path == '/about/' %}active{% endif %}"><a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                                    <li class="{% if request.path == '/contact/' %}active{% endif %}"><a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                                <li class="{% if request.path == '/blogs/' %}active{% endif %}"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
+
+                
+
+                <li class="d-md-block d-lg-none d-block "><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+
+
+                <li class=" d-sm-block d-md-block d-lg-none">
+                    <select class="custom-select-form selectric ms-3 rounded changeLang nav-link scrollto"
+                        aria-label="Default select example">
+                                                    <option value="afr"
+                                >
+                                Afrikaans
+                            </option>
+                                                    <option value="spanish"
+                                >
+                                Spanish
+                            </option>
+                                                    <option value="EN"
+                                selected>
+                                English
+                            </option>
+                                            </select>
+                </li>
+
+                
+
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </nav>
+        <div class="header-right d-flex d-none  d-md-none d-lg-block">
+                            <a href="{% url 'login' %}" class="sp_btn_border sp_btn_sm me-3">Login</a>
+                        <select class="changeLang" aria-label="Default select example">
+                                    <option value="afr"
+                        >
+                        Afrikaans
+                    </option>
+                                    <option value="spanish"
+                        >
+                        Spanish
+                    </option>
+                                    <option value="EN"
+                        selected>
+                        English
+                    </option>
+                            </select>
+        </div>
+    </div>
+</header>

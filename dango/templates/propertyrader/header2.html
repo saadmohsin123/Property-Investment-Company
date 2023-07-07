@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="auth-top-part">
+    <a href="{% url 'home' %}" class="auth-logo">
+        <img class="img-fluid rounded sm-device-img text-align"
+            src="https://www.linkpicture.com/q/logo_19.png" width="100%" style="max-height:200px; max-width:223px;"
+            alt="logo">
+    </a>
+    {% if request.path == '/accounts/register/' %}
+        <p class="mb-0"><span class="me-2">Already registered?</span> <a class="sp_theme_btn sp_btn_sm"
+            href="{% url 'login' %}">Login</a></p>
+    {% else %}
+        <p class="mb-0"><span class="me-2">Haven't registered yet?</span> <a class="sp_theme_btn sp_btn_sm"
+            href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+</div>

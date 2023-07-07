@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="qmqk6di4baf7hsdaDoMdk65EIMnhfBGmg0h3RA0D">
+    <link rel="shortcut icon" type="image/png" href="https://24-7propertytraders.site/asset/theme1/images/icon/icon.png">
+    <title>
+        24/7 property traders- Dashboard
+    </title>
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/selectric.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/iziToast.min.css">
+    <link href="https://24-7propertytraders.site/asset/theme1/frontend/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://24-7propertytraders.site/asset/theme1/frontend/css/color.php?primary_color=0029D7">
+
+
+    <style>
+        .modal-backdrop.fade.show {
+            display: none;
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #5463ff;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sp-referral>.single-child.root-child>.sub-child-list::before {
+            background-color: var(--main-color);
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list.step-2>.single-child>p img {
+            border: 2px solid #0aa27c;
+        }
+
+        .sub-child-list.step-3>.single-child>p img {
+            border: 2px solid #a20a0a;
+        }
+
+        .sub-child-list.step-4>.single-child>p img {
+            border: 2px solid #f562e6;
+        }
+
+        .sub-child-list.step-5>.single-child>p img {
+            border: 2px solid #a20a0a;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div id="preloader"></div>
+
+
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <button type="button" class="sidebar-open-btn me-3">
+                    <i class="bi bi-arrow-bar-left"></i>
+                    <i class="bi bi-arrow-bar-right"></i>
+                </button>
+                <h1 class="logo me-auto me-lg-0 ">
+                    <a href="{% url '' %}">
+                                                    <img class="img-fluid rounded sm-device-img text-align"
+                                src="https://24-7propertytraders.site/asset/theme1/images/logo/logo.png" width="100%" alt="pp">
+                                            </a>
+                </h1>
+            </div>
+
+            <div class="dropdown ms-3">
+                <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <img src="https://24-7propertytraders.site/asset/theme1/frontend/img/user.png" alt="pp">
+                                                <span class="text-white ms-2"> {{ username }}</span>
+                    </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+
+                    <li><a class="dropdown-item" href="https://24-7propertytraders.site/profile/setting">Settings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="active">
+                        <a href="https://24-7propertytraders.site/dashboard"><i class="fas fa-layer-group"></i> Dashboard</a>
+                    </li>
+
+                    <li class="has_submenu ">
+                        <a href="#0"><i class="fas fa-funnel-dollar"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/investmentplan"><i class="fas fa-minus"></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/invest/log"><i class="fas fa-minus"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has_submenu ">
+                        <a href="#0"><i class="fas fa-coins"></i> Deposit</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/deposit"><i class="fas fa-minus"></i> Deposit</a>
+                            </li>
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/deposit/log"><i class="fas fa-minus"></i> Deposit log</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="has_submenu ">
+                        <a href="#0"><i class="fas fa-hand-holding-usd"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/withdraw"><i class="fas fa-minus"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href="https://24-7propertytraders.site/withdraw/all"><i class="fas fa-minus"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="">
+                        <a href="https://24-7propertytraders.site/interest/log"><i class="far fa-file-alt"></i> Interest log</a>
+                    </li>
+                    <li class="">
+                        <a href="https://24-7propertytraders.site/transaction/log"><i class="fas fa-file-invoice-dollar"></i> Transaction log</a>
+                    </li>
+                    <li class="">
+                        <a href="https://24-7propertytraders.site/commision"><i class="fas fa-file-invoice-dollar"></i> Refferal log</a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="https://24-7propertytraders.site/ticket"><i class="fas fa-headset"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="https://chat.whatsapp.com/Lo2mBIfov3N23NcVGvH9Oy">Whatsapp group</a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/+5N31AQvST183YWM0">Telegram</a>
+                    </li>
+                    <li>
+                        <a href="https://24-7propertytraders.site/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan -N/A
+                    </p>
+                    <a href="https://24-7propertytraders.site/investmentplan">Update plan <i
+                class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+            <div class="dashboard-body-part">
+
+                <div class="row gy-4">
+
+
+
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="d-box-one">
+                            <span class="caption-title">Account balance</span>
+                            <h3 class="d-box-one-amount">
+                                600.00 ZAR</h3>
+                            <div class="d-box-one-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="d-box-one">
+                            <span class="caption-title">Total withdraw</span>
+                            <h3 class="d-box-one-amount">
+                                0.00 ZAR</h3>
+                            <div class="d-box-one-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="d-box-one">
+                            <span class="caption-title">Refferal earn</span>
+                            <h3 class="d-box-one-amount">0.00 ZAR
+                            </h3>
+                            <div class="d-box-one-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4 mt-2">
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="d-box-two">
+                            <a href="https://24-7propertytraders.site/invest/all" class="link-btn"></a>
+                            <h3 class="d-box-two-amount">
+                                0.00 ZAR</h3>
+                            <span class="caption-title">Total invest</span>
+                            <div class="d-box-two-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="d-box-two">
+                            <a href="#0" class="link-btn"></a>
+                            <h3 class="d-box-two-amount">
+                                0 ZAR
+                            </h3>
+                            <span class="caption-title">Current invest</span>
+                            <div class="d-box-two-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="d-box-two">
+                            <a href="#0" class="link-btn"></a>
+                            <h3 class="d-box-two-amount">
+                                N/A
+                            </h3>
+                            <span class="caption-title">Current plan</span>
+                            <div class="d-box-two-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="d-box-two">
+                            <a href="https://24-7propertytraders.site/invest/pending" class="link-btn"></a>
+                            <h3 class="d-box-two-amount">
+                                0.00 ZAR</h3>
+                            <span class="caption-title">Pending invest</span>
+                            <div class="d-box-two-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="d-box-two">
+                            <a href="https://24-7propertytraders.site/withdraw/pending" class="link-btn"></a>
+                            <h3 class="d-box-two-amount">
+                                0.00 ZAR</h3>
+                            <span class="caption-title">Pending withdraw</span>
+                            <div class="d-box-two-icon">
+                                <i class="fas fa-wallet"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label>Your refferal link</label>
+                    <div class="input-group mb-3">
+                        <input type="text" id="refer-link" class="form-control copy-text" value="https://24-7propertytraders.site/register/saadmohsin" placeholder="referallink.com/refer" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                        <button type="button" class="input-group-text copy sp_theme_btn" id="basic-addon2">Copy</button>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Reference tree</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-md-12 text-center mt-5">
+                                    <i class="far fa-sad-tear display-1"></i>
+                                    <p class="mt-2">
+                                        No reference user found
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="planDelete" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <form action="" method="post">
+                        <input type="hidden" name="_token" value="qmqk6di4baf7hsdaDoMdk65EIMnhfBGmg0h3RA0D">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Delete Plan</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/purecounter/purecounter.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/php-email-form/validate.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/selectric.min.js"></script>
+
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/iziToast.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.uploadPreview.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/user_dashboard.js"></script>
+
+    <script>
+        'use strict';
+
+        $('.planDelete').on('click', function() {
+            const modal = $('#planDelete');
+
+            modal.find('form').attr('action', $(this).data('href'))
+
+            modal.modal('show')
+
+
+        })
+
+
+        var copyButton = document.querySelector('.copy');
+        var copyInput = document.querySelector('.copy-text');
+        copyButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            var text = copyInput.select();
+            document.execCommand('copy');
+        });
+        copyInput.addEventListener('click', function() {
+            this.select();
+        });
+    </script>
+
+
+
+
+
+    <script>
+        'use strict'
+        var url = "https://24-7propertytraders.site/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+
+        // responsive menu slideing
+        $(".d-sidebar-menu>li>a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("open")) {
+                element.removeClass("open");
+                element.find("li").removeClass("open");
+                element.find("ul").slideUp(500, "linear");
+            } else {
+                element.addClass("open");
+                element.children("ul").slideDown();
+                element.siblings("li").children("ul").slideUp();
+                element.siblings("li").removeClass("open");
+                element.siblings("li").find("li").removeClass("open");
+                element.siblings("li").find("ul").slideUp();
+            }
+        });
+
+        $('.sidebar-open-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.d-sidebar').toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>
