@@ -1,0 +1,174 @@
+{% extends 'propertyrader/base2.html' %}
+
+{% load static %}
+
+<title>{% block title %}Property Investment Company - Login {% endblock %}</title>
+
+{% block content %}
+
+    <div id="preloader"></div>
+
+                <div class="auth-body-part">
+                    <div class="auth-form-wrapper">
+                        <h3 class="text-center mb-4">Login your account</h3>
+                        <form action="{% url 'login' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput">Email</label>
+                                <input type="email" class="form-control" name="email" value="" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput">Pasword</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                            </div>
+                            <p class="text-end"><a href="https://24-7propertytraders.site/forgot/password" class="color-change">Forget password?</a></p>
+                            <button class="sp_theme_btn w-100" type="submit"> Log in </button>
+                        </form>
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="auth-footer-part">
+                    <p class="text-center mb-0">
+                        All rights reserved.
+                    </p>
+                </div>
+            </div>
+            <div class="auth-thumb-area">
+                <div class="auth-thumb">
+                    <img src="https://24-7propertytraders.site/asset/theme1/images/frontendlogin/frontend_login_image.png" alt="image">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <button type="button" class="sp_btn sp_btn_warning  btn-floating btn-lg" id="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg>
+    </button>
+
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/purecounter/purecounter.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/slick.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/vendor/php-email-form/validate.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/selectric.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/main.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/iziToast.min.js"></script>
+    <script src="https://24-7propertytraders.site/asset/theme1/frontend/js/jquery.uploadPreview.min.js"></script>
+
+    <script>
+        "use strict";
+
+        function submitUserForm() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML =
+                    "<span class='text-danger'>@changeLang('Captcha field is required.')</span>";
+                return false;
+            }
+            return true;
+        }
+
+        function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+        'use strict';
+
+
+
+        $(document).ready(function() {
+            $('#trial_subscribe').on('click', function(e) {
+
+                e.preventDefault();
+                var email = $('#trial_email').val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    method: 'POST',
+                    url: "https://24-7propertytraders.site/subscribe",
+                    data: {
+                        email: email
+                    },
+                    success: function(response) {
+
+                        if (response.fails) {
+                            notify('error', response.errorMsg.email)
+
+                        }
+
+                        if (response.success) {
+                            $('#email').val('');
+                            notify('success', response.successMsg)
+
+                        }
+                    }
+                });
+            })
+
+
+        });
+    </script>
+
+
+    <script>
+        'use strict'
+        var url = "https://24-7propertytraders.site/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+{% endblock %}x

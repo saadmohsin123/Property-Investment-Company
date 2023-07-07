@@ -109,88 +109,37 @@
             </div>
         </div>
 
-        <div class="row gy-4">
-                                            <div class="col-lg-4 col-md-6">
-                    <div class="invest-plan">
-                        <div class="invest-plan-shape"></div>
-                        <div class="invest-plan-top">
-                            <h4 class="invest-plan-name">Apartment</h4>
-                            <h5 class="invest-plan-amount">15.00                                     %
-                                                            </h5>
-                            <p class="mb-0">Every Day</p>
-                        </div>
-
-                        <div class="invest-plan-middle">
-                            <h5 class="invest-plan-min-max">
-                                                                    Min
-                                    1,200.00 ZAR
-                                    <p class="mb-0">-</p>
-                                    Max
-                                    4,000.00 ZAR
-                                                            </h5>
-                            <ul class="invest-plan-features">
-                                <li>
-
-                                                                            For 30
-                                        Times
-                                    
-                                </li>
-
-                            
-
-                                                                    <li>Capital back No</li>
-                                                            </ul>
-                        </div>
-                        <div class="invest-plan-action mt-3">
-                                                            <a class="sp_theme_btn w-100 mb-3"
-                                    href="https://24-7propertytraders.site/gateways/10">Invest now</a>
-                                                                         
-                                    
-                                                    </div>
-                    </div>
+        {% for plan in plans %}
+        <div class="col-lg-4 col-md-6">
+            <div class="invest-plan">
+                <div class="invest-plan-shape"></div>
+                <div class="invest-plan-top">
+                    <h4 class="invest-plan-name">{{ plan.name }}</h4>
+                    <h5 class="invest-plan-amount">${{ plan.daily_return }} USD</h5>
+                    <p class="mb-0">Every Day</p>
                 </div>
-                                            <div class="col-lg-4 col-md-6">
-                    <div class="invest-plan">
-                        <div class="invest-plan-shape"></div>
-                        <div class="invest-plan-top">
-                            <h4 class="invest-plan-name">Mansion</h4>
-                            <h5 class="invest-plan-amount">20.00                                     %
-                                                            </h5>
-                            <p class="mb-0">Every Day</p>
-                        </div>
 
-                        <div class="invest-plan-middle">
-                            <h5 class="invest-plan-min-max">
-                                                                    Min
-                                    4,100.00 ZAR
-                                    <p class="mb-0">-</p>
-                                    Max
-                                    20,000.00 ZAR
-                                                            </h5>
-                            <ul class="invest-plan-features">
-                                <li>
+            <div class="invest-plan-middle">
+                <h5 class="invest-plan-min-max">
+                    <p class="mb-0"></p>
+                     Invest ${{ plan.invest_amount }} USD
+                </h5>
+                <ul class="invest-plan-features">
+                    <li>
+                        For {{ plan.duration }} Days
+                    </li>
 
-                                                                            For 30
-                                        Times
-                                    
-                                </li>
+                    <li>Total ${{ plan.total_amount }} USD</li>
+                </ul>
+            </div>
+            <div class="invest-plan-action mt-3">
+                <a class="sp_theme_btn w-100 mb-3" href="https://24-7propertytraders.site/gateways/9">Invest now</a>
 
-                            
 
-                                                                    <li>Capital back No</li>
-                                                            </ul>
-                        </div>
-                        <div class="invest-plan-action mt-3">
-                                                            <a class="sp_theme_btn w-100 mb-3"
-                                    href="https://24-7propertytraders.site/gateways/9">Invest now</a>
-                                                                         
-                                    
-                                                    </div>
-                    </div>
-                </div>
-                    </div>
+            </div>
+        </div>
     </div>
-</section>
+    {% endfor %}
 
 <div class="modal fade" id="invest" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
